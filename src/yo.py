@@ -1,4 +1,4 @@
-
+print("yo")
 def write():
     print("--------------------------------------------------------------------------")
     print("Do you want to choose how many tries you get? ")
