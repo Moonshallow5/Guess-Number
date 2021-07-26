@@ -1,5 +1,3 @@
-print("yo")
-
 
 def write():
     print("--------------------------------------------------------------------------")
@@ -7,6 +5,5 @@ def write():
     print("Enter Y to choose the number of tries and N to guess with infinite tries")
     print("Please enter -1 if you want to concede")
     print("--------------------------------------------------------------------------")
-
 
 write()
