@@ -9,15 +9,11 @@ def write():
     print("--------------------------------------------------------------------------")
 
 
-write()
-
 
 def number():
-    computer_number = random.randrange(0, 100)
-    return computer_number
+    global computer
+    computer = random.randrange(0, 100)
 
-
-computer = number()
 
 
 def input_more(player_input):
@@ -38,11 +34,12 @@ def pick_equal(player_input):
 
 
 def pick_loop(tries=0):
+    write()
+    number()
     i = 0
-    print(computer)
     while i == 0:
+        print(computer)
         player_input = int(input("Enter: "))
-        print(player_input)
         if input_more(player_input):
             tries += 1
         if pick_less(player_input):
@@ -50,8 +47,13 @@ def pick_loop(tries=0):
         if pick_equal(player_input):
             print("Well done")
             tries += 1
-            print("Ties: "+str(tries))
+            print("Ties: " + str(tries))
             break
+    play = input("Would u play again? Type Y to play again ")
+    if play == "Y":
+        pick_loop()
+    else:
+        print("Good game")
 
 
 pick_loop()
